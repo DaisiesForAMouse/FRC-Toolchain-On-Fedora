@@ -9,6 +9,8 @@ URL:            http://gcc.gnu.org
 Source0:        ftp://gcc.gnu.org/pub/gcc/releases/gcc-%{version}/gcc-%{version}.tar.gz
 Source1:        config.patch
 
+AutoReq: no
+
 %description
 Part of the FRC 2018 Power Up C++ tool-chain.
 
@@ -59,7 +61,8 @@ make -j%{procs} all-gcc all-target-libsanitizer all-target-libgcc all-target-lib
 cd gcc-build
 make "DESTDIR=%{buildroot}" install-gcc install-target-libsanitizer install-target-libgcc install-target-libstdc++-v3
 
-cp -r %{buildroot}%{_prefix}/libexec/gcc/arm-frc-linux-gnueabi %{buildroot}/usr/lib/gcc
+cp -r %{buildroot}/%{_prefix}/libexec/gcc/arm-frc-linux-gnueabi %{buildroot}/usr/lib/gcc
+rm -rf %{buildroot}/usr/arm-frc-linux-gnueabi/share/info/dir
 
 strip %{buildroot}%{_bindir}/arm-frc-linux-gnueabi* 2>/dev/null || true
 find %{buildroot}%{_prefix}/lib -type f -exec %{_bindir}/${_target}-strip --strip-unneeded {} \; 2>/dev/null || true
@@ -1257,7 +1260,6 @@ find %{buildroot}%{_prefix}/lib -type f -exec %{_bindir}/${_target}-strip --stri
 %{_mandir}/man7/gpl.7.gz
 %{_prefix}/arm-frc-linux-gnueabi/share/info/cpp.info
 %{_prefix}/arm-frc-linux-gnueabi/share/info/cppinternals.info
-%{_prefix}/arm-frc-linux-gnueabi/share/info/dir
 %{_prefix}/arm-frc-linux-gnueabi/share/info/gcc.info
 %{_prefix}/arm-frc-linux-gnueabi/share/info/gccinstall.info
 %{_prefix}/arm-frc-linux-gnueabi/share/info/gccint.info
