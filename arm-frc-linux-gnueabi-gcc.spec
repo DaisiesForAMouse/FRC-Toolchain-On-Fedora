@@ -11,6 +11,12 @@ Source1:        config.patch
 
 AutoReq: no
 
+BuildRequires: texinfo, gettext, flex, bison, zlib-devel, isl-devel
+BuildRequires: gmp-devel, mpfr-devel, libmpc-devel, elfutils-libelf-devel
+BuildRequires: gcc-gnat, libstdc++
+BuildRequires: arm-frc-linux-gnueabi-binutils arm-frc-linux-gnueabi-eglibc arm-frc-linux-gnueabi-linux-api-headers
+Requires: arm-frc-linux-gnueabi-binutils arm-frc-linux-gnueabi-eglibc arm-frc-linux-gnueabi-linux-api-headers
+
 %description
 Part of the FRC 2018 Power Up C++ tool-chain.
 
@@ -789,8 +795,6 @@ find %{buildroot}%{_prefix}/lib -type f -exec %{_bindir}/${_target}-strip --stri
 %{_prefix}/arm-frc-linux-gnueabi/lib/libstdc++.so.6
 %{_prefix}/arm-frc-linux-gnueabi/lib/libstdc++.so.6.0.21
 %{_prefix}/arm-frc-linux-gnueabi/lib/libstdc++.so.6.0.21-gdb.py
-%{_prefix}/arm-frc-linux-gnueabi/lib/libstdc++.so.6.0.21-gdb.pyc
-%{_prefix}/arm-frc-linux-gnueabi/lib/libstdc++.so.6.0.21-gdb.pyo
 %{_prefix}/arm-frc-linux-gnueabi/lib/libstdc++fs.a
 %{_prefix}/arm-frc-linux-gnueabi/lib/libstdc++fs.la
 %{_prefix}/arm-frc-linux-gnueabi/lib/libsupc++.a
@@ -1237,18 +1241,6 @@ find %{buildroot}%{_prefix}/lib -type f -exec %{_bindir}/${_target}-strip --stri
 %{_prefix}/libexec/gcc/arm-frc-linux-gnueabi/5.5.0/lto-wrapper
 %{_prefix}/libexec/gcc/arm-frc-linux-gnueabi/5.5.0/lto1
 %{_prefix}/libexec/gcc/arm-frc-linux-gnueabi/5.5.0/plugin/gengtype
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/__init__.py
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/__init__.pyc
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/__init__.pyo
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/v6/__init__.py
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/v6/__init__.pyc
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/v6/__init__.pyo
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/v6/printers.py
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/v6/printers.pyc
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/v6/printers.pyo
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/v6/xmethods.py
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/v6/xmethods.pyc
-%{_datarootdir}/gcc-5.5.0/python/libstdcxx/v6/xmethods.pyo
 %{_mandir}/man1/arm-frc-linux-gnueabi-cpp.1.gz
 %{_mandir}/man1/arm-frc-linux-gnueabi-g++.1.gz
 %{_mandir}/man1/arm-frc-linux-gnueabi-gcc.1.gz
@@ -1263,7 +1255,10 @@ find %{buildroot}%{_prefix}/lib -type f -exec %{_bindir}/${_target}-strip --stri
 %{_prefix}/arm-frc-linux-gnueabi/share/info/gcc.info
 %{_prefix}/arm-frc-linux-gnueabi/share/info/gccinstall.info
 %{_prefix}/arm-frc-linux-gnueabi/share/info/gccint.info
-
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/__init__.py
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/__init__.py
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/printers.py
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/xmethods.py
 
 %changelog
 * Fri Jan 12 2018 David Chen <david.chen9909@gmail.com> 5.5.0-1 

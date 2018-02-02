@@ -14,6 +14,8 @@ Source2:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-v
 Source3:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6-thread-db_%{_basever}_cortexa9-vfpv3.ipk 
 Source4:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6-extra-nss_%{_basever}_cortexa9-vfpv3.ipk
 
+BuildRequires: arm-frc-linux-gnueabi-binutils
+
 %description
 Kernel headers for use in FRC 2018 Power Up. Sanitized for use in userspace %{_target} 
 

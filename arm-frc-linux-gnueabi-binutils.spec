@@ -7,7 +7,7 @@ License:        GPLv3
 URL:            http://sources.redhat.com/binutils
 Source0:        ftp://ftp.gnu.org/gnu/binutils/binutils-%{version}.tar.bz2
 
-BuildRequires:      glibc
+BuildRequires:      glibc, bison
 Requires(post):     info
 Requires(preun):    info
 

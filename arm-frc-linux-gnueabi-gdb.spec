@@ -7,6 +7,13 @@ License:        GPLv3
 URL:            http://www.gnu.org/software/gdb/
 Source0:        ftp://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.xz
 
+BuildRequires:	texinfo
+BuildRequires:	ncurses-devel
+BuildRequires:	python2 python2-devel
+BuildRequires:  python3 python3-devel
+BuildRequires:	texinfo-tex
+BuildRequires:	expat-devel
+
 %description
 The GNU Debugger for use in the 2018 FRC C++ toolchain.
 

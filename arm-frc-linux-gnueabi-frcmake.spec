@@ -5,23 +5,22 @@ Summary:        Wrapper scripts for using CMake with the FRC toolchain
 
 License:        GPLv3
 URL:            https://github.com/wpilibsuite/toolchain-builder
-Source0:        https://github.com/wpilibsuite/toolchain-builder
+Source0:        frcmake-%{version}.tar.gz
 
 %description
 Wrapper scripts for using CMake with the FRC toolchain.
 
 %prep
-rm -rf %{builddir}
-mkdir -p %{builddir}
-cd %{builddir}
+rm -rf %{_builddir}
+mkdir -p %{_builddir}
+cd %{_builddir}
+tar xf %{_sourcedir}/frcmake-%{version}.tar.gz
 
 %install
-cp -r %{_sourcedir}/toolchain-builder .
-cd %{_sourcedir}/toolchain-builder/tools
+cd %{_builddir}/tools
 make -f frcmake-nix-makefile "DESTDIR=%{buildroot}" install
 
 %files
-
 %{_prefix}/arm-frc-linux-gnueabi/share/cmake/toolchain.cmake
 %{_bindir}/frc-cmake-toolchain
 %{_bindir}/frcmake
