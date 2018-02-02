@@ -5,4 +5,7 @@ These are spec files that are to be used for building the C++ toolchain the 2018
 The goal here is, to some degree, give a Fedora/RPM alternative to the Ubnutu PPA and Arch Linux builds found here:
 http://first.wpi.edu/FRC/roborio/toolchains/
 
-Note: Not the highest quality of RPM spec files here, so some will find it preferable to build from source, but it will pass to build on most typical systems.
+# COPR
+
+The build packages are available here:
+https://copr.fedorainfracloud.org/coprs/daisiesforamouse/FRC-Toolchain-On-Fedora/
