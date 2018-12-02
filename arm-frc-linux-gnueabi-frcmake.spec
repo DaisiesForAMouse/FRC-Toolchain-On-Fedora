@@ -14,10 +14,11 @@ Wrapper scripts for using CMake with the FRC toolchain.
 rm -rf %{_builddir}
 mkdir -p %{_builddir}
 cd %{_builddir}
-tar xf %{_sourcedir}/toolchain.tar.gz
+mkdir -p toolchain
+tar xf %{_sourcedir}/toolchain.tar.gz -C toolchain --strip-components 1
 
 %install
-cd %{_builddir}/tools
+cd %{_builddir}/toolchain/tools
 make -f frcmake-nix-makefile "DESTDIR=%{buildroot}" install
 
 %files
