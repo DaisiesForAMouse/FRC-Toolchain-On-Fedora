@@ -5,7 +5,7 @@ Summary:        Wrapper scripts for using CMake with the FRC toolchain
 
 License:        GPLv3
 URL:            https://github.com/wpilibsuite/toolchain-builder/
-Source0:        https://github.com/wpilibsuite/toolchain-builder/releases/download/v2019-{%version}/FRC-2019-Linux-Toolchain-6.3.0.tar.gz
+Source0:        toolchain.tar.gz
 
 %description
 Wrapper scripts for using CMake with the FRC toolchain.
@@ -14,7 +14,7 @@ Wrapper scripts for using CMake with the FRC toolchain.
 rm -rf %{_builddir}
 mkdir -p %{_builddir}
 cd %{_builddir}
-tar xf %{_sourcedir}/FRC-2019-Linux-Toolchain-6.3.0.tar.gz
+tar xf %{_sourcedir}/toolchain.tar.gz
 
 %install
 cd %{_builddir}/tools
