@@ -1,7 +1,7 @@
 Name:           arm-frc-linux-gnueabi-binutils
 Version:        2.29
 Release:        1%{?dist}
-Summary:        Assemble and manipulate binary and object files for FRC arm targets 
+Summary:        Assemble and manipulate binary and object files for FRC arm targets
 
 License:        GPLv3
 URL:            http://sources.redhat.com/binutils
@@ -32,7 +32,6 @@ Part of the FRC 2018 Power Up C++ tool-chain.
     --enable-ld \
     --enable-gold=default \
     --enable-plugins
-
 
 %define info /usr/arm-frc-linux-gnueabi/share/info
 make configure-host
@@ -133,5 +132,5 @@ make
 
 
 %changelog
-* Fri Jan 12 2018 David Chen <david.chen9909@gmail.com> 2.24-1 
+* Fri Jan 12 2018 David Chen <david.chen9909@gmail.com> 2.24-1
 - Initial version of the package

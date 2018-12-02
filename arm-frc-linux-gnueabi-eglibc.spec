@@ -11,13 +11,13 @@ URL:            http://www.eglibc.org
 Source0:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6-dev_%{_basever}_cortexa9-vfpv3.ipk
 Source1:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6_%{_basever}_cortexa9-vfpv3.ipk
 Source2:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libcidn1_%{_basever}_cortexa9-vfpv3.ipk
-Source3:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6-thread-db_%{_basever}_cortexa9-vfpv3.ipk 
+Source3:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6-thread-db_%{_basever}_cortexa9-vfpv3.ipk
 Source4:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6-extra-nss_%{_basever}_cortexa9-vfpv3.ipk
 
 BuildRequires: arm-frc-linux-gnueabi-binutils
 
 %description
-Kernel headers for use in FRC 2018 Power Up. Sanitized for use in userspace %{_target} 
+Kernel headers for use in FRC 2018 Power Up. Sanitized for use in userspace %{_target}
 
 %global _enable_debug_package 0
 %global debug_package %{nil}
@@ -536,6 +536,5 @@ cp -r usr %{installdir}
 %{_prefix}/arm-frc-linux-gnueabi/usr/lib/libutil.so
 
 %changelog
-* Wed Jan 17 2018 David Chen <david.chen9909@gmail.com> 4.4-1 
+* Wed Jan 17 2018 David Chen <david.chen9909@gmail.com> 4.4-1
 - Initial version of the package
-
