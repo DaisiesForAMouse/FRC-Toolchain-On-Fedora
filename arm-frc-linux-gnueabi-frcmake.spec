@@ -1,11 +1,11 @@
 Name:           arm-frc-linux-gnueabi-frcmake
-Version:        2019-3
+Version:        3
 Release:        1%{?dist}
 Summary:        Wrapper scripts for using CMake with the FRC toolchain
 
 License:        GPLv3
 URL:            https://github.com/wpilibsuite/toolchain-builder/
-Source0:        https://github.com/wpilibsuite/toolchain-builder/releases/download/v{%version}/FRC-2019-Linux-Toolchain-6.3.0.tar.gz
+Source0:        https://github.com/wpilibsuite/toolchain-builder/releases/download/v2019-{%version}/FRC-2019-Linux-Toolchain-6.3.0.tar.gz
 
 %description
 Wrapper scripts for using CMake with the FRC toolchain.
