@@ -1,7 +1,7 @@
 Name:           arm-frc-linux-gnueabi-gcc
 Version:        5.5.0
 Release:        1%{?dist}
-Summary:        The GNU Compiler Collection (arm-frc-linux-gnueabi) 
+Summary:        The GNU Compiler Collection (arm-frc-linux-gnueabi)
 
 
 License:        GPLv3
@@ -50,7 +50,7 @@ cd gcc-build
     --with-ld=%{_bindir}/%{_target}-ld \
     --with-cpu=cortex-a9 \
     --with-float=softfp \
-    --with-fpu=vfp \
+    --with-fpu=vfpv3 \
     --with-specs='%{save-temps: -fverbose-asm} %{funwind-tables|fno-unwind-tables|mabi=*|ffreestanding|nostdlib:;:-funwind-tables}' \
     --enable-lto \
     --with-pkgversion='GCC for FRC' \
@@ -1259,7 +1259,17 @@ find %{buildroot}%{_prefix}/lib -type f -exec %{_bindir}/${_target}-strip --stri
 %{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/__init__.py
 %{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/printers.py
 %{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/xmethods.py
+%{_prefix}/arm-frc-linux-gnueabi/lib/libstdc++.so.6.0.21-gdb.pyc
+%{_prefix}/arm-frc-linux-gnueabi/lib/libstdc++.so.6.0.21-gdb.pyo
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/__init__.pyc
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/__init__.pyo
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/__init__.pyc
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/__init__.pyo
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/printers.pyc
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/printers.pyo
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/xmethods.pyc
+%{_prefix}/share/gcc-5.5.0/python/libstdcxx/v6/xmethods.pyo
 
 %changelog
-* Fri Jan 12 2018 David Chen <david.chen9909@gmail.com> 5.5.0-1 
+* Fri Jan 12 2018 David Chen <david.chen9909@gmail.com> 5.5.0-1
 - Initial version of the package

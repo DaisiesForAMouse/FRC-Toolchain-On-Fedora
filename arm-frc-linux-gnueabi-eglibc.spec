@@ -17,7 +17,7 @@ Source4:        http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-v
 BuildRequires: arm-frc-linux-gnueabi-binutils
 
 %description
-Kernel headers for use in FRC 2018 Power Up. Sanitized for use in userspace %{_target}
+Kernel headers for use in FRC 2018 Power Up.
 
 %global _enable_debug_package 0
 %global debug_package %{nil}
@@ -29,7 +29,7 @@ Kernel headers for use in FRC 2018 Power Up. Sanitized for use in userspace %{_t
 rm -rf %{builddir}
 mkdir -p %{builddir}
 cd %{builddir}
-for file in %{_sourcedir}/lib*.ipk; do
+for file in %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4}; do
     ar x $file
     tar xf data.tar.gz
 done
@@ -536,5 +536,5 @@ cp -r usr %{installdir}
 %{_prefix}/arm-frc-linux-gnueabi/usr/lib/libutil.so
 
 %changelog
-* Wed Jan 17 2018 David Chen <david.chen9909@gmail.com> 4.4-1
+* Wed Jan 17 2018 David Chen <david.chen9909@gmail.com> 2.23-1
 - Initial version of the package

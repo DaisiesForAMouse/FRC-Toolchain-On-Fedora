@@ -22,6 +22,7 @@ Part of the FRC 2018 Power Up C++ tool-chain.
 ./configure \
     --prefix=/usr \
     --infodir=/usr/arm-frc-linux-gnueabi/share/info \
+    --libdir=/usr/arm-frc-linux-gnueabi/lib \
     --target=arm-frc-linux-gnueabi \
     --with-sysroot=/usr/arm-frc-linux-gnueabi \
     --with-pkgversion='GNU Binutils for FRC' \
@@ -132,5 +133,5 @@ make
 
 
 %changelog
-* Fri Jan 12 2018 David Chen <david.chen9909@gmail.com> 2.24-1
+* Fri Jan 12 2018 David Chen <david.chen9909@gmail.com> 2.29-1
 - Initial version of the package
